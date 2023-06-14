@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="个人博客"><title>今日面试题汇总 | zch233</title><link rel="stylesheet" type="text/css" href="/Blog/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/Blog/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/Blog/favicon.ico"><link rel="apple-touch-icon" href="/Blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/Blog/apple-touch-icon.png"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">今日面试题汇总</h1><a id="logo" href="/Blog/.">zch233</a><p class="description">人到中年</p></div><div id="nav-menu"><a class="current" href="/Blog/."><i class="fa fa-home"> Home</i></a><a href="/Blog/archives/"><i class="fa fa-archive"> Archive</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">今日面试题汇总</h1><div class="post-meta">2019-03-29<span> | </span><span class="category"><a href="/Blog/categories/%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95/">准备面试</a></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">Contents</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-CSS-%E6%9C%89%E5%93%AA%E4%BA%9B%E6%A0%B7%E5%BC%8F%E5%8F%AF%E4%BB%A5%E7%BB%99%E5%AD%90%E5%85%83%E7%B4%A0%E7%BB%A7%E6%89%BF"><span class="toc-number">1.</span> <span class="toc-text">Q: CSS 有哪些样式可以给子元素继承!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-CSS-%E4%B8%ADtransition%E5%92%8Canimate%E6%9C%89%E4%BD%95%E5%8C%BA%E5%88%AB-animate-%E5%A6%82%E4%BD%95%E5%81%9C%E7%95%99%E5%9C%A8%E6%9C%80%E5%90%8E%E4%B8%80%E5%B8%A7"><span class="toc-number">2.</span> <span class="toc-text">Q: CSS 中transition和animate有何区别? animate 如何停留在最后一帧!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-%E6%B1%82-1-10-11-1-%E2%80%99-5%E2%80%99-12-13-14-15-2-3-4-7-8-9-%E5%86%85%E6%9C%80%E5%A4%A7%E5%80%BC%E4%B8%8E%E6%9C%80%E5%B0%8F%E5%80%BC%E4%B9%8B%E5%B7%AE"><span class="toc-number">3.</span> <span class="toc-text">Q: 求[1, 10, 11, -1,’-5’,12, 13, 14, 15, 2, 3, 4, 7, 8, 9]内最大值与最小值之差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-%E8%AF%B7%E7%BB%99Array%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95-%E5%8E%BB%E9%87%8D%E5%90%8E%E8%BF%94%E5%9B%9E%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6-%E6%96%B0%E6%95%B0%E7%BB%84-%E2%80%98%E2%80%99"><span class="toc-number">4.</span> <span class="toc-text">Q: 请给Array实现一个方法,去重后返回重复的字符(新数组)‘’</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-%E8%B0%88%E8%B0%88%E4%BD%A0%E5%AF%B9-TCP-%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">5.</span> <span class="toc-text">Q: 谈谈你对 TCP 的理解;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-HTTP-%E5%92%8C-HTTPS-%E6%9C%89%E4%BD%95%E5%B7%AE%E5%BC%82-%E5%90%AC%E8%AF%B4%E8%BF%87-SPDY-%E4%B9%88"><span class="toc-number">6.</span> <span class="toc-text">Q: HTTP 和 HTTPS 有何差异? 听说过 SPDY 么?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E7%BC%93%E5%AD%98%E6%8E%A7%E5%88%B6%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%A4%9A%E5%B0%91-%E8%AF%B4%E8%AF%B4%E7%9C%8B"><span class="toc-number">7.</span> <span class="toc-text">Q: 浏览器缓存和服务端的缓存控制你了解多少,说说看?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-%E6%9C%89%E5%AD%97%E7%AC%A6%E4%B8%B2-var-test-x3D-%E2%80%99abc345efgabcab%E2%80%99-%E8%AF%B7%E6%A0%B9%E6%8D%AE%E6%8F%90%E7%A4%BA%E5%AE%9E%E7%8E%B0%E5%AF%B9%E5%BA%94%E8%A6%81%E6%B1%82"><span class="toc-number">8.</span> <span class="toc-text">Q:有字符串 var test&#x3D;’abc345efgabcab’; 请根据提示实现对应要求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-Vue-Router%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F%E4%B8%BB%E8%A6%81%E4%BE%9D%E8%B5%96%E4%BB%80%E4%B9%88%E5%AE%9E%E7%8E%B0%E7%9A%84"><span class="toc-number">9.</span> <span class="toc-text">Q: Vue-Router的两种模式主要依赖什么实现的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-MVVM-%E5%92%8C-MVC-%E7%9A%84%E5%B7%AE%E5%BC%82-%E5%90%AC%E8%AF%B4%E8%BF%87-MVP"><span class="toc-number">10.</span> <span class="toc-text">Q: MVVM 和 MVC 的差异? 听说过 MVP?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-%E4%BD%A0%E5%AF%B9%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E8%BF%99%E5%9D%97%E6%8E%8C%E6%8F%A1%E7%9A%84%E5%A6%82%E4%BD%95%E2%80%A6"><span class="toc-number">11.</span> <span class="toc-text">Q: 你对基础算法这块掌握的如何….</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-%E6%80%9D%E7%BB%B4%E6%8B%93%E5%B1%95%E9%A2%98-%E4%BD%A0%E6%9C%89%E4%B8%A4%E4%B8%AA%E7%8E%BB%E7%92%83%E7%90%83-%E6%9C%89%E4%B8%AA100%E7%B1%B3%E7%9A%84%E9%AB%98%E6%A5%BC-%E6%B1%82%E7%8E%BB%E7%92%83%E7%90%83%E5%9C%A8%E5%93%AA%E4%B8%AA%E6%A5%BC%E5%B1%82%E6%89%94%E4%B8%8B%E4%BC%9A%E7%A2%8E-%E7%94%A8%E7%9A%84%E6%AC%A1%E6%95%B0%E6%9C%80%E5%B0%91"><span class="toc-number">12.</span> <span class="toc-text">Q: 思维拓展题: 你有两个玻璃球,有个100米的高楼,求玻璃球在哪个楼层扔下会碎(用的次数最少);</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Q-webpack-%E6%98%AF%E4%BB%80%E4%B9%88-webpack-%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BC%98%E5%8C%96%E6%89%8B%E6%AE%B5%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">13.</span> <span class="toc-text">Q: webpack 是什么?webpack 常见的优化手段有哪些;</span></a></li></ol></div></div><div class="post-content"><h2 id="Q-CSS-有哪些样式可以给子元素继承"><a href="#Q-CSS-有哪些样式可以给子元素继承" class="headerlink" title="Q: CSS 有哪些样式可以给子元素继承!"></a>Q: CSS 有哪些样式可以给子元素继承!</h2><ul>
+<li>可继承的:font-size,font-weight,line-height,color,cursor等</li>
+<li>不可继承的一般是会改变盒子模型的:display,margin、border、padding、height等</li>
+</ul>
+<p>更加全面的可以到引擎找</p>
+<h2 id="Q-CSS-中transition和animate有何区别-animate-如何停留在最后一帧"><a href="#Q-CSS-中transition和animate有何区别-animate-如何停留在最后一帧" class="headerlink" title="Q: CSS 中transition和animate有何区别? animate 如何停留在最后一帧!"></a>Q: CSS 中transition和animate有何区别? animate 如何停留在最后一帧!</h2><ul>
+<li>transition一般用来做过渡的, 没时间轴的概念, 通过事件触发(一次),没中间状态(只有开始和结束)</li>
+<li>而animate则是做动效,有时间轴的概念(帧可控),可以重复触发和有中间状态;</li>
+<li>过渡的开销比动效小,前者一般用于交互居多,后者用于活动页居多;</li>
+<li>至于如何让animate停留在最后一帧也好办,就它自身参数的一个值就可以了<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation-fill-mode</span>: forwards;  </span><br><span class="line">&lt;!<span class="attr">--backwards</span>则停留在首帧,both是轮流--&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Q-求-1-10-11-1-’-5’-12-13-14-15-2-3-4-7-8-9-内最大值与最小值之差"><a href="#Q-求-1-10-11-1-’-5’-12-13-14-15-2-3-4-7-8-9-内最大值与最小值之差" class="headerlink" title="Q: 求[1, 10, 11, -1,’-5’,12, 13, 14, 15, 2, 3, 4, 7, 8, 9]内最大值与最小值之差"></a>Q: 求[1, 10, 11, -1,’-5’,12, 13, 14, 15, 2, 3, 4, 7, 8, 9]内最大值与最小值之差</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 来一个很粗糙的版本,只当传入是数组且可以隐性转为数字的</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">MaxMinPlus</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="comment">// 返回最大值与最小值之差</span></span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr) ? <span class="title class_">Math</span>.<span class="property">max</span>.<span class="title function_">apply</span>(<span class="title class_">Math</span>, arr) - <span class="title class_">Math</span>.<span class="property">min</span>.<span class="title function_">apply</span>(<span class="title class_">Math</span>, arr) : <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;传入的不是数组亦或者未能解决的错误&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果是 20</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 若是要完善的话,要考虑传入的是非数组,</span></span><br><span class="line"><span class="comment">//传入字符串的时候要判断,然后切割为数组..</span></span><br><span class="line"><span class="comment">// 都要考虑进去代码量不短</span></span><br></pre></td></tr></table></figure>
+<h2 id="Q-请给Array实现一个方法-去重后返回重复的字符-新数组-‘’"><a href="#Q-请给Array实现一个方法-去重后返回重复的字符-新数组-‘’" class="headerlink" title="Q: 请给Array实现一个方法,去重后返回重复的字符(新数组)‘’"></a>Q: 请给Array实现一个方法,去重后返回重复的字符(新数组)‘’</h2><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> testArr = [<span class="number">1</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>];</span><br><span class="line">    </span><br><span class="line">  <span class="built_in">Array</span>.prototype.extraChar = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">      <span class="keyword">var</span> cacheExtraChar = []; <span class="comment">// 缓存重复出现的字符</span></span><br><span class="line">      <span class="keyword">var</span> that = this; <span class="comment">// 缓存 this;</span></span><br><span class="line">      this.<span class="built_in">map</span>(<span class="keyword">function</span>(<span class="params">item,index</span>)&#123;</span><br><span class="line">          <span class="comment">// 怎么理解这段代码呢?</span></span><br><span class="line">          <span class="comment">// 就是向前往后查找一遍和从后往前查找一遍,不等就是重复</span></span><br><span class="line">          <span class="comment">// 为什么还要判断一遍缓存,是过滤缓存数组内多次写入</span></span><br><span class="line">          (that.<span class="built_in">indexOf</span>(item) !== that.lastIndexOf(item)) &amp;&amp; cacheExtraChar.<span class="built_in">indexOf</span>(item) === <span class="number">-1</span> ? cacheExtraChar.<span class="built_in">push</span>(item) : <span class="number">-1</span>;</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> cacheExtraChar;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">testArr.extraChar(); <span class="comment">// [1, 3, 7, 2, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 若是还需要排序就再排序下</span></span><br><span class="line"></span><br><span class="line">[<span class="number">1</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">3</span>]</span><br><span class="line">.extraChar()</span><br><span class="line">.<span class="built_in">sort</span>(<span class="keyword">function</span>(<span class="params">a,b</span>)&#123;<span class="keyword">return</span> a-b&#125;) <span class="comment">// [1, 2, 3, 4, 7]</span></span><br></pre></td></tr></table></figure>
+<h2 id="Q-谈谈你对-TCP-的理解"><a href="#Q-谈谈你对-TCP-的理解" class="headerlink" title="Q: 谈谈你对 TCP 的理解;"></a>Q: 谈谈你对 TCP 的理解;</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a731a467e42e">文章连接</a></p>
+<h2 id="Q-HTTP-和-HTTPS-有何差异-听说过-SPDY-么"><a href="#Q-HTTP-和-HTTPS-有何差异-听说过-SPDY-么" class="headerlink" title="Q: HTTP 和 HTTPS 有何差异? 听说过 SPDY 么?"></a>Q: HTTP 和 HTTPS 有何差异? 听说过 SPDY 么?</h2><p>我只是粗浅的回答了下…</p>
+<p><code>HTTP</code>相对于 <code>HTTPS</code>来说,速度较快且开销较小(没有 SSL&#x2F;TSL) 对接,默认是80端口;</p>
+<p><code>HTTP</code>容易遭受域名劫持,而<code>HTTPS</code>相对来说就较为安全但开销较大(数据以加密的形式传递),默认端口为443..</p>
+<p><code>HTTP</code>是明文跑在 <code>TCP</code> 上.而<code>HTTPS</code>跑在<code>SSL/TLS</code>应用层之下,<code>TCP</code>上的</p>
+<p>Q: 那么 <code>HTTPS</code>中的<code>TLS/SSL</code>是如何保护数据的…</p>
+<p>一般有两种形式,非对称加密,生成公钥和私钥,私钥丢服务器,公钥每次请求去比对验证;</p>
+<p>更严谨的采用 CA(Certificate Authority),给密钥签名….</p>
+<p>Q: 你说到对称加密和非对称加密,能说说整个流程如何运转的么(HTTPS)</p>
+<ul>
+<li>对称加密:<ul>
+<li>双方都有同样的密钥,每次通讯都要生成一个唯一密钥,速度很快</li>
+<li>安全性较低且密钥增长的数量极快</li>
+</ul>
+</li>
+<li>非对称加密(一般用 RSA)<ul>
+<li>安全性很高,对资源消耗很大(CPU),目前主流的加密算法(基本用于交换密钥或签名,而非所有通讯内容)</li>
+</ul>
+</li>
+<li>CA(数字签名):<ul>
+<li>这个是为了防止中间人给偷换了造成数据被窃取而诞生的</li>
+<li>用一些权威机构颁布的算法来签名,权威机构做中间人,通讯过程都会跟机构核对一遍</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>懂得真心不多,回来找了下相关资料,有兴趣可以点击看看;</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22142170">深入揭秘HTTPS安全问题&amp;连接建立全过程</a></li>
+<li><a target="_blank" rel="noopener" href="https://klionsec.github.io/2017/07/31/https-learn/">深入理解 https 通信加密过程:口语化</a> “ : 看了上面那篇文章来看下面,会清晰很多</li>
+</ul>
+<p>Q: <code>SPDY</code> 听说过么.什么来的?</p>
+<p>谷歌推行一种协议(<code>HTTP</code> 之下SSL之上[TCP]),可以算是HTTP2的前身,有这么些优点</p>
+<ul>
+<li>压缩数据(HEADER)</li>
+<li>多路复用</li>
+<li>优先级(可以给请求设置优先级)</li>
+</ul>
+<p>而这些优点基本 HTTP2也继承下来了..</p>
+<p>Q: 你对 HTTP 的状态吗了解多少…</p>
+<p>这里列举一丢丢常见的..</p>
+<ul>
+<li>1XX: 一般用来判断协议更换或者确认服务端收到请求这些<ul>
+<li>100: 服务端收到部分请求,若是没有拒绝的情况下可以继续传递后续内容</li>
+<li>101: 客户端请求变换协议,服务端收到确认</li>
+</ul>
+</li>
+<li>2xx: 请求成功,是否创建链接,请求是否接受,是否有内容这些<ul>
+<li>200: (成功)服务器已成功处理了请求。</li>
+<li>201: (已创建)请求成功并且服务器创建了新的资源。</li>
+<li>202: (已接受)服务器已接受请求，但尚未处理。</li>
+<li>204: (无内容)服务器成功处理了请求，但没有返回任何内容。</li>
+</ul>
+</li>
+<li>3XX: 一般用来判断重定向和缓存<ul>
+<li>301: 所有请求已经转移到新的 url(永久重定向),会被缓存</li>
+<li>302: 临时重定向,不会被缓存</li>
+<li>304: 本地资源暂未改动,优先使用本地的(根据<code>If-Modified-Since or If-Match</code>去比对服务器的资源,缓存)</li>
+</ul>
+</li>
+<li>4XX: 一般用来确认授权信息,请求是否出错,页面是否丢失<ul>
+<li>400: 请求出错</li>
+<li>401: 未授权,不能读取某些资源</li>
+<li>403: 阻止访问,一般也是权限问题</li>
+<li>404: 页面丢失,资源没找到</li>
+<li>408: 请求超时</li>
+<li>415: 媒介类型不被支持，服务器不会接受请求。</li>
+</ul>
+</li>
+<li>5XX: 基本都是服务端的错误<ul>
+<li>500: 服务端错误</li>
+<li>502: 网关错误</li>
+<li>504: 网关超时</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Q: HTTP的请求报文是怎么样的,能大体的说下么?</p>
+<p>HTTP 的请求报文 &#x3D; 请求行 + 请求头 + 请求体;</p>
+<ul>
+<li>请求行: 这个好理解就是访问的方法+ 协议+ 访问的 URL 构成</li>
+<li>请求头: 这个也好理解,比如 <code>accept</code>,<code>content-type</code>,<code>user-agent</code>这类值键对,服务端可以直接读取的</li>
+<li>请求体: 比如 POST 提交的一个表单,我们编码后放在上面需要传递的</li>
+</ul>
+<p>想深入了解的具体引擎搜索</p>
+<p>Q: 请求报文知道,那你说说<code>cookie</code>是如何跟随请求的?</p>
+<p>Cookie 就是保存在 HTTP 协议的请求或者应答头部(Cookie 是由服务端生成),这样一路漂泊…</p>
+<p>Q: Cookie 隔离是什么,如何做;</p>
+<blockquote>
+<p>cookie 隔离就是降低 <code>header</code> 的数据包含,以达到加快访问速度的目的</p>
+</blockquote>
+<p>方案: 静态资源丢 CDN或者非主域来加载</p>
+<h2 id="Q-浏览器缓存和服务端的缓存控制你了解多少-说说看"><a href="#Q-浏览器缓存和服务端的缓存控制你了解多少-说说看" class="headerlink" title="Q: 浏览器缓存和服务端的缓存控制你了解多少,说说看?"></a>Q: 浏览器缓存和服务端的缓存控制你了解多少,说说看?</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/603a785a8413">文章链接</a></p>
+<h2 id="Q-有字符串-var-test-x3D-’abc345efgabcab’-请根据提示实现对应要求"><a href="#Q-有字符串-var-test-x3D-’abc345efgabcab’-请根据提示实现对应要求" class="headerlink" title="Q:有字符串 var test&#x3D;’abc345efgabcab’; 请根据提示实现对应要求"></a>Q:有字符串 var test&#x3D;’abc345efgabcab’; 请根据提示实现对应要求</h2><ul>
+<li>去掉字符串中的 a,b,c 字符 ,形成结果’345efg’;<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.replace(<span class="regexp">/[abc]/g</span>,<span class="string">&#x27;&#x27;</span>); <span class="regexp">//</span> <span class="string">&quot;345efg&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>将字符串的数字用括号括起来, 形成结果: abc[3][4][5]efg….’<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">test.replace(<span class="regexp">/\d/g</span>,<span class="string">&#x27;[$&amp;]&#x27;</span>);  <span class="regexp">//</span> <span class="string">&quot;abc[3][4][5]efgabcab&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="regexp">//</span> 若是有分组则按照<span class="variable">$1</span>, <span class="variable">$2</span>, <span class="variable">$3</span>的形式进行引用，而 $&amp; 则表示的是整个正则表达式匹配的内容。</span><br></pre></td></tr></table></figure></li>
+<li>将字符串中的每个数字的值分别乘以2,输出:’abc6810….’<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> temp = test.<span class="built_in">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="built_in">map</span>(<span class="keyword">function</span>(<span class="params">item</span>)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="regexp">/^\d$/</span>.test(item) ? item * <span class="number">2</span> : item;</span><br><span class="line">&#125;).join(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// &quot;abc6810efgabcab&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Q-Vue-Router的两种模式主要依赖什么实现的"><a href="#Q-Vue-Router的两种模式主要依赖什么实现的" class="headerlink" title="Q: Vue-Router的两种模式主要依赖什么实现的"></a>Q: Vue-Router的两种模式主要依赖什么实现的</h2><ul>
+<li>hash主要依赖location.hash来改动 URL,达到不刷新跳转的效果.每次 hash 改变都会触发hashchange事件(来响应路由的变化,比如页面的更换)</li>
+<li>history主要利用了 HTML5的 historyAPI 来实现,用pushState和replaceState来操作浏览历史记录栈</li>
+</ul>
+<h2 id="Q-MVVM-和-MVC-的差异-听说过-MVP"><a href="#Q-MVVM-和-MVC-的差异-听说过-MVP" class="headerlink" title="Q: MVVM 和 MVC 的差异? 听说过 MVP?"></a>Q: MVVM 和 MVC 的差异? 听说过 MVP?</h2><p>这类的文章好多,三个开发模式的诞生都有前后,不是同时出现的.</p>
+<p>传送门:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html">MVC，MVP 和 MVVM 的图示</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/593021272f301e0058273468">浅析前端开发中的 MVC&#x2F;MVP&#x2F;MVVM 模式</a></li>
+</ul>
+<h2 id="Q-你对基础算法这块掌握的如何…"><a href="#Q-你对基础算法这块掌握的如何…" class="headerlink" title="Q: 你对基础算法这块掌握的如何…."></a>Q: 你对基础算法这块掌握的如何….</h2><blockquote>
+<p>来,这纸给你,写个快排试试…</p>
+</blockquote>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 快排的大体思路是这样的,</span></span><br><span class="line"><span class="comment">// 找个中位值,从原数组切割出来,</span></span><br><span class="line"><span class="comment">// 剩下的作为两个数组,每次都去比较;</span></span><br><span class="line"><span class="comment">// 直到递归的结果出来, 平均复杂度O(nlog n)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">quickSort</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="comment">//如果数组长度&lt;=1,则直接返回</span></span><br><span class="line">  <span class="keyword">if</span> (arr.<span class="built_in">length</span> &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 中间位(基准)取长度的一半向下取整</span></span><br><span class="line">  <span class="keyword">var</span> pivotIndex = Math.<span class="built_in">floor</span>(arr.<span class="built_in">length</span> / <span class="number">2</span>);</span><br><span class="line">  <span class="comment">//把中间位从原数组切割出来, splice 会改变原数组!!!!</span></span><br><span class="line">  <span class="keyword">var</span> pivot = arr.<span class="built_in">splice</span>(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>];</span><br><span class="line">  <span class="comment">//定义两个空数组来存放比对后的值</span></span><br><span class="line">  <span class="keyword">var</span> <span class="built_in">left</span> = [];</span><br><span class="line">  <span class="keyword">var</span> <span class="built_in">right</span> = [];</span><br><span class="line"></span><br><span class="line">  <span class="comment">//比基准小的放在left，比基准大的放在right</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> , j = arr.<span class="built_in">length</span>; i &lt; j; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr[i] &lt;= pivot) &#123;</span><br><span class="line">      <span class="built_in">left</span>.<span class="built_in">push</span>(arr[i]);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">right</span>.<span class="built_in">push</span>(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//递归下去  arr = [ left , pivot , right]</span></span><br><span class="line">  <span class="comment">// 怎么个递归法,就是比对后的数组还是会重复之前的取基准再切开比较..直到最后没有可以切了</span></span><br><span class="line">  <span class="keyword">return</span> quickSort(<span class="built_in">left</span>).concat([pivot], quickSort(<span class="built_in">right</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q-思维拓展题-你有两个玻璃球-有个100米的高楼-求玻璃球在哪个楼层扔下会碎-用的次数最少"><a href="#Q-思维拓展题-你有两个玻璃球-有个100米的高楼-求玻璃球在哪个楼层扔下会碎-用的次数最少" class="headerlink" title="Q: 思维拓展题: 你有两个玻璃球,有个100米的高楼,求玻璃球在哪个楼层扔下会碎(用的次数最少);"></a>Q: 思维拓展题: 你有两个玻璃球,有个100米的高楼,求玻璃球在哪个楼层扔下会碎(用的次数最少);</h2><p>问题的要点: 玻璃球碎(有限个数) ,确定楼层数 , 最少次数 &#x3D;&gt; 就是求最优的公式</p>
+<p>在这道题上给秀的一脸,我的第一次的思路</p>
+<blockquote>
+<p>先折半,就变成[1-50][51-100], 那就是 1+50 &#x3D; 51次 …</p>
+</blockquote>
+<p>面试大佬说,你用了快排的思路就肯定不是最优的..</p>
+<blockquote>
+<p>憋了许久,想到开平方 <img src="/Blog/2019/03/29/interview/%E4%BB%8A%E6%97%A5%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/index/img.png"></p>
+<p> , 这样的话,最多只要20次</p>
+</blockquote>
+<p>然后又说给我三个球,在1000米的高楼,判断多少次…但是根据我上面的话,</p>
+<blockquote>
+<p>开立方, <img src="/Blog/2019/03/29/interview/%E4%BB%8A%E6%97%A5%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/index/img_1.png"> , 那最多不超过30次;</p>
+</blockquote>
+<p>至于第一次丢球的位置如何确定, 就是开平之后的值作为一个区间.</p>
+<p>若 N 个球和 M 米的大厦…第一次丢球的高度区间就是这个了 <img src="/Blog/2019/03/29/interview/%E4%BB%8A%E6%97%A5%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/index/img_2.png"></p>
+<p>面试大佬说这个还可以…那就暂且告一段落</p>
+<p>…回来用万能的搜索引擎找了下..最优方案+最少次数需要考虑的东西很多,没那么简单</p>
+<p>传送门: <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/31855632">知乎有人讨论了这个问题</a>;</p>
+<p>但是高数还老师了..这种帖子看的一脸懵逼….抽空再好好研究下</p>
+<h2 id="Q-webpack-是什么-webpack-常见的优化手段有哪些"><a href="#Q-webpack-是什么-webpack-常见的优化手段有哪些" class="headerlink" title="Q: webpack 是什么?webpack 常见的优化手段有哪些;"></a>Q: webpack 是什么?webpack 常见的优化手段有哪些;</h2><p>webpack 是一个资源处理工具,它的出现节省了我们的人力和时间;可以对资源打包,解析,区分开发模式等等…</p>
+<p>常见的优化手段:</p>
+<ul>
+<li>分离第三方库(依赖),比如引入dll</li>
+<li>引入多进程编译,比如happypack</li>
+<li>提取公共的依赖模块,比如commonChunkPlugin</li>
+<li>资源混淆和压缩:比如UglifyJS</li>
+<li>分离样式这些,减小bundle chunk的大小,比如ExtractTextPlugin</li>
+<li>GZIP 压缩,在打包的时候对资源对齐压缩,只要部署的服务器能解析即可..减少请求的大小</li>
+<li>还有按需加载这些,一般主流的框架都有对应的模块懒加载方式.</li>
+<li>至于tree shaking目前webpack3&#x2F;4已经默认集成</li>
+</ul>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/Blog/2019/03/29/interview/%E4%BB%8A%E6%97%A5%E4%BB%BD%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86/index/">今日份面试题整理</a><a class="next" href="/Blog/2019/03/28/chrome_debug/14%E4%B8%A8THE_LAST/index/">14丨THE LAST</a></div><div id="container"></div><link rel="stylesheet" type="text/css" href="//unpkg.com/gitalk/dist/gitalk.css"><script type="text/javascript" src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript" src="//unpkg.com/gitalk/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+  clientID: 'e4a44394ea630529848c',
+  clientSecret: '884b4deb2d55fbcc63921e12f73b58e944efa110',
+  repo: 'Blog',
+  owner: 'zch233',
+  admin: ['zch233'],
+  id: md5(location.pathname),
+  distractionFreeMode: false
+})
+gitalk.render('container')
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="author-info"><a class="info-avatar" href="./about/" title="About"><img class="nofancybox" src="/Blog/img/avatar.png"/></a><p>coder.</p><a class="info-icon" href="zch2333333@gmail.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/zch233" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Lisp/">Lisp</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Rails/">Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/SCSS/">SCSS</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Shell/">Shell</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Vue/">Vue</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/chrome%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">chrome调试技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/daisy/">daisy</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/relearnFE/">relearnFE</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95/">准备面试</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E6%97%A5%E5%B8%B8%E6%9D%82%E7%96%91/">日常杂疑</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E8%B6%A3%E9%97%BB/">趣闻</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/17/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9AJS-TS/index/">TypeScript全解：JS&TS</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/16/typescript/React%20%E6%B3%9B%E5%9E%8B%E7%BB%84%E4%BB%B6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/index/">React 泛型组件是什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/15/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：类型体操（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/15/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：类型体操（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/14/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9Aclass%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：class（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/14/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9Aclass%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：class（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/12/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：泛型编程（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/12/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：泛型编程（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/11/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：深入对象与函数（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/11/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：深入对象与函数（上）</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="https://www.jianshu.com/u/4b4c7aec223d" title="littleyu" target="_blank">littleyu</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/Blog/." rel="nofollow">zch233.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/Blog/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/Blog/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/Blog/css/search.css?v=1.0.0"><script type="text/javascript" src="/Blog/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+  search_path = 'search.xml';
+}
+var path = '/Blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/Blog/js/copycode.js?v=1.0.0" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/Blog/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/Blog/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/Blog/js/smartresize.js?v=1.0.0"></script></div></body></html>

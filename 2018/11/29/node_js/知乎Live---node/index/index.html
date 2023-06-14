@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="个人博客"><title>知乎Live---node | zch233</title><link rel="stylesheet" type="text/css" href="/Blog/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/latest/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/latest/grids-responsive-min.min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/latest/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/Blog/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/Blog/favicon.ico"><link rel="apple-touch-icon" href="/Blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/Blog/apple-touch-icon.png"><script type="text/javascript" src="//lib.baomitu.com/clipboard.js/latest/clipboard.min.js"></script><script type="text/javascript" src="//lib.baomitu.com/toastr.js/latest/toastr.min.js"></script><link rel="stylesheet" href="//lib.baomitu.com/toastr.js/latest/toastr.min.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">知乎Live---node</h1><a id="logo" href="/Blog/.">zch233</a><p class="description">人到中年</p></div><div id="nav-menu"><a class="current" href="/Blog/."><i class="fa fa-home"> Home</i></a><a href="/Blog/archives/"><i class="fa fa-archive"> Archive</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">知乎Live---node</h1><div class="post-meta">2018-11-29<span> | </span><span class="category"><a href="/Blog/categories/Node-js/">Node.js</a></span></div><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">Contents</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Node-js%E7%8E%AF%E5%A2%83-3m%E5%AE%89%E8%A3%85%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">安装Node.js环境 3m安装法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text">常用软件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web%E7%BC%96%E7%A8%8B%E8%A6%81%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">Web编程要点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E5%89%8D%E7%AB%AF%E8%BD%AC"><span class="toc-number">4.</span> <span class="toc-text">从前端转</span></a></li></ol></div></div><div class="post-content"><h3 id="安装Node-js环境-3m安装法"><a href="#安装Node-js环境-3m安装法" class="headerlink" title="安装Node.js环境 3m安装法"></a>安装Node.js环境 3m安装法</h3><ul>
+<li>nvm（node version manager）【需要使用npm安装，替代品是yrm（支持yarn）】</li>
+<li>nrm（node registry manager）【需要使用npm安装，替代品是yrm（支持yarn）】</li>
+<li>npm（node packages manager）【内置，替代品是n或nvs（对win也支持）】</li>
+</ul>
+<h3 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h3><ul>
+<li>1）oh my zsh是我最习惯的shell，终端下非常好用 配合iterm2分屏 + spectacle全屏，几乎无敌</li>
+<li>2）brew是mac装软件非常好的方式，和apt-get、rpm等都非常类似 安装4个必备软件 - brew install git 最流行的SCM源码版本控制软件 - brew install wget 下载、扒站神器 - brew install ack 搜索代码神器 - brew install autojump 终端下多目录跳转神器</li>
+<li>3）vim 我虽然不算vim党，但也深爱着。janus是一个非常好用的vim集成开发环境。比如ctrl-p、nerdtree等插件都集成了，对我这种懒人足够了。</li>
+</ul>
+<p>自己 Mac + Node.js 电脑初始化开发环境的安装脚本 <a target="_blank" rel="noopener" href="https://github.com/i5ting/i5ting-mac-init">https://github.com/i5ting/i5ting-mac-init</a></p>
+<p>值得一学，我推荐VSCode编辑器！</p>
+<p>更多调试方法，参见<a target="_blank" rel="noopener" href="https://github.com/i5ting/node-debug-tutorial">https://github.com/i5ting/node-debug-tutorial</a></p>
+<p><img src="/Blog/2018/11/29/node_js/%E7%9F%A5%E4%B9%8ELive---node/index/img.png" alt="Node.js 使用场景主要分为4大类"></p>
+<ul>
+<li>1）跨平台：覆盖你能想到的面向用户的所有平台，传统的PC Web端，以及PC客户端 <code>nw.js/electron</code> 、移动端 <code>cordova</code>、HTML5、<code>react-native</code>、<code>weex</code>，硬件 <code>ruff.io</code> 等</li>
+<li>2）Web应用开发：网站、Api、RPC服务等</li>
+<li>3）前端：三大框架 React \ <code>Vue</code> \ <code>Angular</code> 辅助开发，以及工程化演进过程（使用<code>Gulp</code> &#x2F;Webpack 构建 Web 开发工具）</li>
+<li>4）工具：<code>npm</code>上各种工具模块，包括各种前端预编译、构建工具 <code>Grunt</code> &#x2F; <code>Gulp</code>、脚手架，命令行工具，各种奇技淫巧等</li>
+</ul>
+<p>Node.js 应用场景非常丰富，比如 Node.js 可以开发操作系统，但一般我都不讲的，就算说了也没多大意义，难道大家真的会用吗？一般，我习惯将 Node.js 应用场景氛围7个部分。</p>
+<p>1）初衷，server端，不想成了前端开发的基础设施<br>2）命令行辅助工具，甚至可以是运维<br>3）移动端：cordova，pc端：nw.js和electron<br>4）组件化，构建，代理<br>5）架构，前后端分离、api proxy<br>6）性能优化、反爬虫与爬虫<br>7) 全栈最便捷之路</p>
+<p>a）Error-first Callback<br>定义错误优先的回调写法只需要注意2条规则即可：</p>
+<ul>
+<li>回调函数的第一个参数返回的error对象，如果error发生了，它会作为第一个err参数返回，如果没有，一般做法是返回null。</li>
+<li>回调函数的第二个参数返回的是任何成功响应的结果数据。如果结果正常，没有error发生，err会被设置为null，并在第二个参数就出返回成功结果数据。</li>
+</ul>
+<p>下面让我们看一下调用函数示例，Node.js 文档里最常采用下面这样的回调方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>(<span class="params">err, res</span>) &#123;</span><br><span class="line">  <span class="comment">// process the error and result</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里的 <code>callback</code> 指的是带有2个参数的函数：”err”和 “res”。语义上讲，非空的“err”相当于程序异常；而空的“err”相当于可以正常返回结果“res”，无任何异常。</p>
+<p>b）EventEmitter</p>
+<p>事件模块是 Node.js 内置的对观察者模式“发布&#x2F;订阅”（publish&#x2F;subscribe）的实现，通过<code>EventEmitter</code>属性，提供了一个构造函数。该构造函数的实例具有 <code>on</code> 方法，可以用来监听指定事件，并触发回调函数。任意对象都可以发布指定事件，被 <code>EventEmitter</code> 实例的 <code>on</code> 方法监听到。</p>
+<p>在node 6之后，可以直接使用<code>require(&#39;events&#39;)</code>类</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">EventEmitter</span> = <span class="built_in">require</span>(<span class="string">&#x27;events&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> util = <span class="built_in">require</span>(<span class="string">&#x27;util&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">MyEmitter</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">util.<span class="title function_">inherits</span>(<span class="title class_">MyEmitter</span>, <span class="title class_">EventEmitter</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEmitter = <span class="keyword">new</span> <span class="title class_">MyEmitter</span>();</span><br><span class="line"></span><br><span class="line">myEmitter.<span class="title function_">on</span>(<span class="string">&#x27;event&#x27;</span>, <span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(a, b, <span class="variable language_">this</span>);</span><br><span class="line">    <span class="comment">// Prints: a b &#123;&#125;</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">myEmitter.<span class="title function_">emit</span>(<span class="string">&#x27;event&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>和jquery、vue里的Event是非常类似的。而且前端自己也有EventEmitter。</p>
+<p>c）如何更好的查Node.js文档 API是应用程序接口Application Programming Interface的简称。从Node.js异步原理，我们可以知道，核心在于 Node.js SDK 中API调用，然后交由EventLoop（Libuv）去执行，所以我们一定要熟悉Node.js的API操作。 Node.js的API都是异步的，同步的函数是奢求，要查API文档，在高并发场景下慎用。 笔者推荐使用 <a href="%5Bhttps://kapeli.com/dash%5D(https://kapeli.com/dash)">Dash</a> 或 <a href="%5Bhttps://zealdocs.org/%5D(https://zealdocs.org/)">Zeal</a> 查看离线文档，经常查看离线文档，对Api理解会深入很多，比IDE辅助要好，可以有效避免离开IDE就不会写代码的窘境。</p>
+<p>Bluebird是 Node.js 世界里性能最好的Promise&#x2F;a+规范的实现模块，Api非常齐全，功能强大，是原生Promise外的不二选择。</p>
+<p>好处如下：</p>
+<ul>
+<li>避免Node.js内置Promise实现 问题，使用与所有版本兼容</li>
+<li>避免Node.js 4曾经出现的内存泄露问题</li>
+<li>内置更多扩展，timeout、 promisifyAll等，对Promise&#x2F;A+规范提供了强有力的补充<br>限于时间关系，这里就不一一列举了，还是那句话，在学习Node.js过程中，对于Promise了解多深入都不过分。 推荐学习资料 - Node.js最新技术栈之Promise篇 <a target="_blank" rel="noopener" href="https://cnodejs.org/topic/560dbc826a1ed28204a1e7de">https://cnodejs.org/topic/560dbc826a1ed28204a1e7de</a> - 理解 Promise 的工作原理 <a target="_blank" rel="noopener" href="https://cnodejs.org/topic/569c8226adf526da2aeb23fd">https://cnodejs.org/topic/569c8226adf526da2aeb23fd</a> - Promise 迷你书 <a target="_blank" rel="noopener" href="http://liubin.github.io/promises-book/">http://liubin.github.io/promises-book/</a></li>
+</ul>
+<p>小结</p>
+<p>这部分共讲了4个小点，都是极其直接的必须掌握的知识点。</p>
+<ul>
+<li><ol>
+<li>异步流程控制学习重点</li>
+</ol>
+</li>
+<li>2）Api写法：Error-first Callback 和 EventEmitter</li>
+<li>3）中流砥柱：Promise</li>
+<li>4）终极解决方案：Async&#x2F;Await</li>
+</ul>
+<hr>
+<p>这里再提一下关于Node.js源码阅读问题，很多人api都还没完熟练就去阅读源码，这是非常不赞成的，不带着问题去读源码是比较容易迷失在大量代码中的。效果并不好。</p>
+<p>先用明白，然后再去阅读Node.js源码，然后探寻libuv并发机制。很多人买了朴大的《深入浅出Node.js》一书，看了之后还是不太会用，不是书写的不好，而是步骤不对。</p>
+<ul>
+<li>Node in action和了不起的Node.js是入门的绝好书籍，非常简单，各个部分都讲了，但不深入，看了之后，基本就能用起来了</li>
+<li>当你用了一段之后，你会对Node.js的运行机制好奇，为啥呢？这时候去读朴大的《深入浅出Node.js》一书就能够解惑。原因很简单，九浅一深一书是偏向底层实现原理的书，从操作系统，并发原理，node源码层层解读。如果是新手读，难免会比较郁闷。</li>
+<li>实践类的可以看看雷宗民（老雷）和赵坤（nswbmw）写的书</li>
+</ul>
+<p>我一般给大家的推荐是把Node in action读上5遍10遍，入门干活足够了。剩下的就是反复实践，多写代码和npm模块就好。</p>
+<h3 id="Web编程要点"><a href="#Web编程要点" class="headerlink" title="Web编程要点"></a>Web编程要点</h3><p>一般，后端开发指的是 Web 应用开发中和视图渲染无关的部分，主要是和数据库交互为主的重业务型逻辑处理。但现在架构升级后，Node.js 承担了前后端分离重任之后，有了更多玩法。从带视图的<strong>传统Web应用</strong>和<strong>面向Api接口应用</strong>，到通过 RPC 调用封装对数据库的操作，到提供前端 Api 代理和网关，服务组装等，统称为<strong>后端开发</strong>，不再是以往只有和数据库打交道的部分才算后端。这样，就可以让前端工程师对开发过程可控，更好的进行调优和性能优化。</p>
+<p>对 Node.js 来说，一直没有在后端取得其合理的占有率，原因是多方面的，暂列几条。</p>
+<ul>
+<li>1）利益分配，已有实现大多是Java或者其他语言，基本是没法撼动的，重写的成本是巨大的，另外，如果用Node写了，那么那些写Java的人怎么办？抢人饭碗，这是要拼命的。</li>
+<li>2）Node相对年轻，大家对Node的理解不够，回调和异步流程控制略麻烦，很多架构师都不愿意花时间去学习。尽管在Web应用部分处理起来非常简单高效，但在遇到问题时并不容易排查定位，对开发者水平要求略高。</li>
+<li>3）开发者技能单一，很多是从前端转过来的，对数据库，架构方面知识欠缺，对系统设计也知之不多，这是很危险的，有种麻杆打狼两头害怕的感觉。</li>
+<li>4）Node在科普、培训、布道等方面做的并不好，国外使用的非常多，国内却很少人知道，不如某些语言做得好。</li>
+</ul>
+<p>尽管如此，Node.js 还是尽人皆知，卷入各种是非风口，也算是在大前端浪潮中大红大紫。原因它的定位非常明确，补足以 JavaScript 为核心的全栈体系中服务器部分。开发也是人，能够同时掌握并精通多门语言的人毕竟不多，而且程序员的美德是“懒”，能使用 JavaScript 一门语言完成所有事儿，为什么要学更多呢？</p>
+<p>我们可以根据框架的特性进行分类</p>
+<table>
+<thead>
+<tr>
+<th>框架名称</th>
+<th>特性</th>
+<th>点评</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Express</td>
+<td>简单、实用，路由中间件等五脏俱全</td>
+<td>最著名的Web框架</td>
+</tr>
+<tr>
+<td>Derby.js &amp;&amp; Meteor</td>
+<td>同构</td>
+<td>前后端都放到一起，模糊了开发便捷，看上去更简单，实际上上对开发来说要求更高</td>
+</tr>
+<tr>
+<td>Sails、Total</td>
+<td>面向其他语言，Ruby、PHP等</td>
+<td>借鉴业界优秀实现，也是 Node.js 成熟的一个标志</td>
+</tr>
+<tr>
+<td>MEAN.js</td>
+<td>面向架构</td>
+<td>类似于脚手架，又期望同构，结果只是蹭了热点</td>
+</tr>
+<tr>
+<td>Hapi和Restfy</td>
+<td>面向Api &amp;&amp; 微服务</td>
+<td>移动互联网时代Api的作用被放大，故而独立分类。尤其是对于微服务开发更是利器</td>
+</tr>
+<tr>
+<td>ThinkJS</td>
+<td>面向新特性</td>
+<td>借鉴ThinkPHP，并慢慢走出自己的一条路，对于Async函数等新特性支持，无出其右，新版v3.0是基于Koa v2.0的作为内核的</td>
+</tr>
+<tr>
+<td>Koa</td>
+<td>专注于异步流程改进</td>
+<td>下一代Web框架</td>
+</tr>
+<tr>
+<td>Egg</td>
+<td>基于Koa，在开发上有极大便利</td>
+<td>企业级Web开发框架</td>
+</tr>
+</tbody></table>
+<p>Web编程核心</p>
+<ul>
+<li>异步流程控制（前面讲过了）</li>
+<li>基本框架 Koa或Express，新手推荐Express，毕竟资料多，上手更容易。如果有一定经验，推荐Koa，其实这些都是为了了解Web编程原理，尤其是中间件机制理解。</li>
+<li>数据库 mongodb或mysql都行，mongoose和Sequelize、bookshelf，TypeOrm等都非常不错。对于事物，不是Node.js的锅，是你选的数据库的问题。另外一些偏门，想node连sqlserver等估计还不成熟，我是不会这样用的。</li>
+<li>模板引擎， ejs，jade，nunjucks。理解原理最好。尤其是extend，include等高级用法，理解布局，复用的好处。其实前后端思路都是一样的。</li>
+</ul>
+<p>1、计算机基础薄弱该如何完善自己的知识体系？</p>
+<p>答:追逐长尾，所见所闻不懂的都去学就好啦。我是这样过来的，头几年每天14个小时+，很累，不过效果还可以。os，算法，数据结构，设计模式，编译原理，基本也就这些重点。做到每天都有进步就好，别贪多求快。数学和英文当然也是越狠越好的！</p>
+<p>3、如何系统的学习node？ 答:阶段 1&#x2F;要会用，能完成工作任务 2&#x2F;写点提高效率的工具 3&#x2F;参与开源项目，甚至是node源码 应对方法 1&#x2F;《node in action》看五遍，然后就去写吧，别管代码质量如何，能写敢写 2&#x2F;多用些模块，理解它们，如果有机会就自己写一下，万一有很多人用你，我小弟写过一个地区选择加载的json数据，star数不少呢 3&#x2F;给别人贡献代码，要去学别人的习惯，网上有git标准工作流和提pr方法，你要做的是精研该模块代码，关注issue，其他就是等机会。另外朴灵的深入浅出多读几遍，试着读node源码，你的理解会更好。推荐看看我写的《通过开源项目去学习》<a target="_blank" rel="noopener" href="https://github.com/i5ting/Study-For-StuQ">https://github.com/i5ting/Study-For-StuQ</a> 4&#x2F;跳出node范围，重新审视node的应用场景，对未来你的技术选项和决策大有裨益</p>
+<p>关于 Node 的书几乎都过时了，我该买哪本？</p>
+<p>答：<br>1）Node in action和了不起的Node.js是入门的绝好书籍，非常简单，各个部分都讲了，但不深入，看了之后，基本就能用起来了<br>2）当你用了一段之后，你会对Node.js的运行机制好奇，为啥呢？这时候去读朴大的《深入浅出Node.js》一书就能够解惑。原因很简单，九浅一深一书是偏向底层实现原理的书，从操作系统，并发原理，node源码层层解读。如果是新手读，难免会比较郁闷。<br>3)实践类的可以看看雷宗民（老雷）和赵坤（nswbmw）写的书</p>
+<p>如果你不着急，也可以等我的那本《更了不起的Node.js》，预计明年3月之后。</p>
+<p>Node Web 框架那么多，我该怎么选？</p>
+<p>答：初学者推荐Express，如果有一定经验，推荐Koa。当然真正项目里还是推荐Eggjs和Thinkjs这样的框架。</p>
+<h3 id="从前端转"><a href="#从前端转" class="headerlink" title="从前端转"></a>从前端转</h3><p>从前端往后端转，api 接口非常容易学会，像 express、koa 这类框架大部分人一周就能学会，最难的是对 db、er 模型的理解，说直白点，还是业务需求落地的理解</p>
+<p>我们来想想一般的前端有什么技能？</p>
+<ul>
+<li>html</li>
+<li>css（兼容浏览器）</li>
+<li>js 会点（可能更多的是会点 jquery）</li>
+<li>ps 切图</li>
+<li>firebug 和 chrome debuger 会的人都不太多</li>
+<li>用过几个框架，大部分人是仅仅会用</li>
+<li>英语一般</li>
+<li>svn&#x2F;git 会一点</li>
+</ul>
+<p>那么他们如果想在前端领域做的更深有哪些难点呢？</p>
+<ul>
+<li>基础：oo，dp，命令，shell，构建等</li>
+<li>编程思想上的理解（mvc、ioc，规约等）</li>
+<li>区分概念</li>
+<li>外围验收，如 H5 和 hybird 等</li>
+<li>追赶趋势，如何学习新东西</li>
+</ul>
+<p>以上皆是痛点，所以比较好的办法应该是这样的。</p>
+<ul>
+<li>玩转 npm、gulp 这样的前端工具类（此时还是前端）</li>
+<li>使用 node 做前后端分离（此时还是前端）</li>
+<li>express、koa 这类框架</li>
+<li>jade、ejs 等模板引擎</li>
+<li>nginx</li>
+<li>玩转【后端】异步流程处理（promise&#x2F;es6的(generator|yield)&#x2F;es7(async|await)）</li>
+<li>玩转【后端】mongodb、mysql 对应的 Node 模块</li>
+</ul>
+<p>从我们的经验看，这样是比较靠谱的。先做最简单前后端分离，里面没有任何和db相关，前端可以非常容易的学会，基本2周就已经非常熟练了。一般半年后，让他们接触【异步流程处理】和【数据库】相关内容，学习后端代码，就可以全栈了。</p>
+<p>招人标准 先说下我的招人标准，做技术总监时上指下派只要看好技术能力和态度即可，做CTO时要考虑团队文化，人品和能否在公司长留，所以不同的人面试要看的点是不一样的，我曾面过很多Node.js程序员，也见过很多面试题，汇总一下，大致有以下9个点： 1. 基本的Node.js几个特性，比如事件驱动、非阻塞I&#x2F;O、Stream等 2. 异步流程控制相关，Promise是必问的 3. 掌握1种以上Web框架，比如Express、Koa、Thinkjs、Restfy、Hapi等，会问遇到过哪些问题、以及前端优化等常识 4. 数据库相关，尤其是SQL、缓存、Mongodb等 5. 对于常见Node.js模块、工具的使用，观察一个人是否爱学习、折腾 6. 是否熟悉linux，是否独立部署过服务器，有+分 7. js语法和es6、es7，延伸CoffeeScript、TypeScript等，看看你是否关注新技术，有+分 8. 对前端是否了解，有+分 9. 是否参与过或写过开源项目，技术博客、有+分 补充一句:只看技能没人品的人，千万别招，白脸狼</p>
+<p>能否推荐点 nodejs 相关的博客<br><a href="%5Bhttps://github.com/sindresorhus/awesome-nodejs%5D(https://github.com/sindresorhus/awesome-nodejs)">sindresorhus&#x2F;awesome-nodejs</a>。</p>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/Blog/2018/11/30/zch's_fool/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA1%E6%AF%941%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E6%AD%A3%E6%96%B9%E5%BD%A2/index/">一行代码实现一个1:1自适应的正方形</a><a class="next" href="/Blog/2018/11/11/vue/%E6%9C%89%E6%B2%A1%E6%9C%89%E5%85%A5%E9%97%A8VUE%EF%BC%8C%E5%B0%B1%E7%9C%8B%E8%BF%99%E4%BB%BD%E8%87%AA%E6%B5%8B%E9%A2%98%E4%BA%86%E2%99%A8/index/">有没有入门VUE，就看这份自测题了♨</a></div><div id="container"></div><link rel="stylesheet" type="text/css" href="//unpkg.com/gitalk/dist/gitalk.css"><script type="text/javascript" src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script><script type="text/javascript" src="//unpkg.com/gitalk/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+  clientID: 'e4a44394ea630529848c',
+  clientSecret: '884b4deb2d55fbcc63921e12f73b58e944efa110',
+  repo: 'Blog',
+  owner: 'zch233',
+  admin: ['zch233'],
+  id: md5(location.pathname),
+  distractionFreeMode: false
+})
+gitalk.render('container')
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="author-info"><a class="info-avatar" href="./about/" title="About"><img class="nofancybox" src="/Blog/img/avatar.png"/></a><p>coder.</p><a class="info-icon" href="zch2333333@gmail.com" title="Email" target="_blank" style="margin-inline:5px"> <i class="fa fa-envelope-square" style="margin-inline:5px"></i></a><a class="info-icon" href="https://github.com/zch233" title="Github" target="_blank" style="margin-inline:5px"> <i class="fa fa-github-square" style="margin-inline:5px"></i></a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Lisp/">Lisp</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Node-js/">Node.js</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Rails/">Rails</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/React/">React</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/SCSS/">SCSS</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Shell/">Shell</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/TypeScript/">TypeScript</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/Vue/">Vue</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/chrome%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">chrome调试技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/daisy/">daisy</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/relearnFE/">relearnFE</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E5%87%86%E5%A4%87%E9%9D%A2%E8%AF%95/">准备面试</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E6%97%A5%E5%B8%B8%E6%9D%82%E7%96%91/">日常杂疑</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E8%B6%A3%E9%97%BB/">趣闻</a></li><li class="category-list-item"><a class="category-list-link" href="/Blog/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/17/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9AJS-TS/index/">TypeScript全解：JS&TS</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/16/typescript/React%20%E6%B3%9B%E5%9E%8B%E7%BB%84%E4%BB%B6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/index/">React 泛型组件是什么？</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/15/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：类型体操（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/15/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：类型体操（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/14/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9Aclass%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：class（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/14/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9Aclass%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：class（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/12/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：泛型编程（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/12/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：泛型编程（上）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/11/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%8B%EF%BC%89/index/">TypeScript全解：深入对象与函数（下）</a></li><li class="post-list-item"><a class="post-list-link" href="/Blog/2023/06/11/typescript/TypeScript%E5%85%A8%E8%A7%A3%EF%BC%9A%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%87%BD%E6%95%B0%EF%BC%88%E4%B8%8A%EF%BC%89/index/">TypeScript全解：深入对象与函数（上）</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="https://www.jianshu.com/u/4b4c7aec223d" title="littleyu" target="_blank">littleyu</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2023 <a href="/Blog/." rel="nofollow">zch233.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/Blog/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.js"></script><script type="text/javascript" src="/Blog/js/fancybox.js?v=1.0.0"></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/latest/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/Blog/css/search.css?v=1.0.0"><script type="text/javascript" src="/Blog/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+  search_path = 'search.xml';
+}
+var path = '/Blog/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/Blog/js/copycode.js?v=1.0.0" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/Blog/css/copycode.css?v=1.0.0"><script type="text/javascript" src="/Blog/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/Blog/js/smartresize.js?v=1.0.0"></script></div></body></html>
